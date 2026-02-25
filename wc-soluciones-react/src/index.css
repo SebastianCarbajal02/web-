@@ -2622,3 +2622,69 @@ h2 em {
         padding: 6px 12px;
     }
 }
+
+/* =========================================
+   ANIMACIONES DE LA PÁGINA DE SERVICIOS
+   ========================================= */
+
+/* Estado inicial (invisible y un poco más abajo) */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(40px);
+    /* La animación fadeInUp se ejecuta automáticamente al cargar la página */
+    animation: fadeInUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+/* Controlamos el orden en el que aparecen los elementos */
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.3s;
+}
+
+.delay-3 {
+    animation-delay: 0.5s;
+}
+
+.delay-4 {
+    animation-delay: 0.7s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para las tarjetas de la galería */
+.service-gallery-card {
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid rgba(251, 192, 45, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    height: 250px;
+    /* Altura uniforme para todas las fotos */
+}
+
+.service-gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que la imagen no se deforme */
+    transition: transform 0.5s ease;
+}
+
+/* Efecto hover en las imágenes */
+.service-gallery-card:hover {
+    border-color: #fbc02d;
+    box-shadow: 0 15px 30px rgba(251, 192, 45, 0.15);
+}
+
+.service-gallery-card:hover img {
+    transform: scale(1.1);
+    /* Zoom suave al pasar el mouse */
+}
