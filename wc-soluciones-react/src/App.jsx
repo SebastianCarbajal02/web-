@@ -5,6 +5,7 @@ import Indicators from './components/Indicators';
 import FAQ from './components/FAQ';
 import WhatsAppBtn from './components/WhatsAppBtn'; /* <--- Importamos el botón */
 import './index.css';
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
         <Services />
         <Indicators />
         <FAQ />
+        <Footer />
       </main>
-      
+
       {/* Colocamos el botón al final */}
       <WhatsAppBtn />
     </>
